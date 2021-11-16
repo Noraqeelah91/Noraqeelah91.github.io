@@ -34,3 +34,14 @@ function GetBooking() {
            }
         });
 }
+
+function DeleteBooking(id) {
+    let url = 'https://api.sheety.co/2e256a675636ad773edb98d656753d18/bookingKpt/bookings/' + id;
+    fetch(url, {
+        method: 'DELETE',
+    })
+        .then(() => {
+            alert("Record id " + id + " deleted!")
+            GetBooking()
+        });
+}
