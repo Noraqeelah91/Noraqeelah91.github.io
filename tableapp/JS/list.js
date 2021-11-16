@@ -22,6 +22,7 @@ function GetBooking() {
                let gAdults = json.bookings[i].adults
                let gChildren = json.bookings[i].children
                let gName = json.bookings[i].name
+               let btnId = "delete" + gId
 
 
                let row = bookingNameList.insertRow(bookingNameList.rows.length)
@@ -31,6 +32,9 @@ function GetBooking() {
                row.insertCell(3).innerHTML = gAdults
                row.insertCell(4).innerHTML = gChildren
                row.insertCell(5).innerHTML = gName
+               row.insertCell(6).innerHTML = "<button id='" + btnId + "' class='btn btn-danger'>Delete</button>"
+
+               bookingIds.push(btnId)
            }
         });
 }
