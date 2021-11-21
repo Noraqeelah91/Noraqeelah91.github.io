@@ -76,3 +76,6 @@ function GetBookX(BookingID) {
             alert("ID " + json.booking.name + "," + "successfully added")
         });
 }
+
+
+
